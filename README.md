@@ -32,10 +32,15 @@ Al iniciar, el contenedor `backend` ejecuta automáticamente `seed.js`, que crea
 | gerente@logistica.com | ger123 | Gerente |
 
 ## Datos de ejemplo incluidos
-- 3 proveedores
-- 5 productos
-- 2 almacenes (con inventario inicial)
-- 2 vehículos
+- 8 proveedores (distribuidoras nacionales e internacionales)
+- 15 productos de embalaje y logística (cajas, pallets, films, flejes, contenedores, etc.)
+- 4 almacenes (Trujillo, La Esperanza, Lima, Arequipa) con inventario distribuido
+- 6 vehículos (camiones de diferentes capacidades y marcas)
+- 6 órdenes de compra con diferentes estados (pendiente, en almacén, en tránsito, entregado)
+- 13 registros de costes de almacenamiento (alquiler, mantenimiento, servicios, mano de obra)
+- 10 registros de costes de transporte (combustible, peajes, mantenimiento, conductor)
+- 6 distribuciones asignadas con estados variados
+- 5 alertas de sobrecostes activas/revisadas
 - Configuración de umbrales de alertas por tipo de operación (compra, almacenamiento, transporte, distribución, general)
 
 ## Módulos implementados (RF01-RF18 / RNF01-RNF10)
