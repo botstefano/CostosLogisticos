@@ -43,47 +43,44 @@ Este comando:
 | supervisor@logistica.com | sup123 | Supervisor | Lectura + gestión de estados/alertas + auditoría |
 | gerente@logistica.com | ger123 | Gerente | Lectura, dashboard, reportes, configuración de alertas |
 
-## Datos de Ejemplo Precargados
+## Datos de Ejemplo Precargados (Plaza Vea - Supermercado)
 
-El sistema incluye datos realistas para simular un proceso logístico completo:
+El sistema incluye datos realistas para simular un proceso logístico completo de Plaza Vea:
 
 ### Proveedores (8)
-- Distribuidoras nacionales e internacionales
-- Contactos y ubicaciones variadas
+- Proveedores de productos de consumo: Nestlé, Gloria, Backus, P&G, Unilever, Alicorp, Pepsico, Johnson & Johnson
+- Contactos y ubicaciones en Lima y principales ciudades
 
 ### Productos (15)
-- Cajas de cartón, pallets, films stretch
-- Flejes, protectores, contenedores
+- Productos de supermercado: arroz, fideos, leche, cerveza, gaseosa, detergente, jabón, aceite, azúcar, café, atún, galletas, shampoo, pasta dental, desodorante
 - Precios unitarios y stock mínimo configurados
 
-### Almacenes (4)
-- Trujillo (Central y Norte)
-- Lima (Centro de Distribución)
-- Arequipa (Sur)
-- Capacidad y costes operativos mensuales
+### Centros de Distribución (5)
+- Trujillo, Chiclayo, Lima Central, Arequipa, Piura
+- Capacidad y costes operativos mensuales realistas para supermercado
 
-### Vehículos (6)
-- Camiones de diferentes capacidades (3.5T a 22T)
+### Vehículos (8)
+- Flota Plaza Vea: camiones refrigerados y de distribución (3.5T a 22T)
 - Marcas: Volvo, Hino, Mercedes, Scania, Iveco, MAN
 - Coste por km configurado
 
 ### Órdenes de Compra (6)
 - Estados variados: pendiente, en almacén, en tránsito, entregado
-- Detalles de productos y cantidades
+- Detalles de productos de consumo y cantidades
 - Fechas de emisión y entrega esperada
 
-### Costes de Almacenamiento (13 registros)
-- Alquiler mensual por almacén
-- Mantenimiento, servicios, mano de obra
+### Costes de Almacenamiento (15 registros)
+- Alquiler mensual por centro de distribución
+- Mantenimiento de cámaras frigoríficas, servicios, mano de obra
 - Referencias operativas
 
 ### Costes de Transporte (10 registros)
-- Rutas entre ciudades (Trujillo-Lima-Arequipa-Chiclayo)
+- Rutas entre centros de distribución (Lima-Trujillo-Arequipa-Chiclayo-Piura)
 - Combustible, peajes, mantenimiento, conductor
 - Kilometraje y costes totales
 
 ### Distribuciones (6)
-- Asignación de vehículos a órdenes de compra
+- Asignación de vehículos Plaza Vea a órdenes de compra
 - Estados: pendiente, en almacén, en tránsito, entregado
 - Fechas de salida y entrega
 

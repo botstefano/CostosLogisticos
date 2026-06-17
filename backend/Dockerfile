@@ -12,6 +12,9 @@ COPY . .
 
 RUN mkdir -p /app/backups
 
+# Ejecutar seed.js para inicializar la base de datos
+RUN node src/database/seed.js
+
 EXPOSE 4000
 
 CMD ["node", "src/server.js"]
