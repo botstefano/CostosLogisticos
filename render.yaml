@@ -27,20 +27,11 @@ services:
       - key: DB_PORT
         value: 5432
       - key: DB_USER
-        fromService:
-          name: logistic-cost-system-db
-          type: pserv
-          property: user
+        value: postgres
       - key: DB_PASSWORD
-        fromService:
-          name: logistic-cost-system-db
-          type: pserv
-          property: password
+        generateValue: true
       - key: DB_NAME
-        fromService:
-          name: logistic-cost-system-db
-          type: pserv
-          property: database
+        value: logistic_cost_system
       - key: JWT_SECRET
         generateValue: true
       - key: JWT_EXPIRES_IN
@@ -61,4 +52,4 @@ services:
         fromService:
           name: logistic-cost-system-backend
           type: web
-          property: url
+          property: host
