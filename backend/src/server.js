@@ -64,5 +64,8 @@ app.use(errorHandler);
 const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`Servidor de Sistema de Costes Logísticos escuchando en puerto ${PORT}`);
-  iniciarRespaldoAutomatico();
+  // Iniciar respaldo automático solo si DB_HOST está configurado
+  if (process.env.DB_HOST) {
+    iniciarRespaldoAutomatico();
+  }
 });
