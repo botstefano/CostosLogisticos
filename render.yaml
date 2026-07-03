@@ -5,10 +5,6 @@ services:
     plan: free
     env: docker
     region: oregon
-    databaseName: logistic_cost_system
-    databaseUser: postgres
-    numConns: 10
-    version: "16"
 
   # Backend API
   - type: web
