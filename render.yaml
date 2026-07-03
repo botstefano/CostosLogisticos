@@ -1,9 +1,8 @@
 services:
   # PostgreSQL Database
-  - type: pserv
+  - type: postgres
     name: logistic-cost-system-db
     plan: free
-    env: docker
     region: oregon
 
   # Backend API
