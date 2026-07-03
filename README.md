@@ -31,13 +31,13 @@ Al iniciar, el contenedor `backend` ejecuta automáticamente `seed.js`, que crea
 | supervisor@logistica.com | sup123 | Supervisor |
 | gerente@logistica.com | ger123 | Gerente |
 
-## Datos de ejemplo incluidos
-- 8 proveedores (distribuidoras nacionales e internacionales)
-- 15 productos de embalaje y logística (cajas, pallets, films, flejes, contenedores, etc.)
-- 4 almacenes (Trujillo, La Esperanza, Lima, Arequipa) con inventario distribuido
-- 6 vehículos (camiones de diferentes capacidades y marcas)
+## Datos de ejemplo incluidos (Plaza Vea - Supermercado)
+- 8 proveedores de productos de consumo (Nestlé, Gloria, Backus, P&G, Unilever, Alicorp, Pepsico, Johnson & Johnson)
+- 15 productos de supermercado (arroz, fideos, leche, cerveza, gaseosa, detergente, jabón, aceite, azúcar, café, atún, galletas, shampoo, pasta dental, desodorante)
+- 5 centros de distribución (Trujillo, Chiclayo, Lima Central, Arequipa, Piura) con inventario distribuido
+- 8 vehículos de la flota Plaza Vea (camiones refrigerados y de distribución)
 - 6 órdenes de compra con diferentes estados (pendiente, en almacén, en tránsito, entregado)
-- 13 registros de costes de almacenamiento (alquiler, mantenimiento, servicios, mano de obra)
+- 15 registros de costes de almacenamiento (alquiler, mantenimiento, servicios, mano de obra)
 - 10 registros de costes de transporte (combustible, peajes, mantenimiento, conductor)
 - 6 distribuciones asignadas con estados variados
 - 5 alertas de sobrecostes activas/revisadas

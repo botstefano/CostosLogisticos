@@ -74,14 +74,14 @@ CREATE TABLE proveedores (
 );
 
 INSERT INTO proveedores (nombre, contacto, telefono, email, direccion) VALUES
-('Distribuidora del Norte S.A.', 'Carlos Méndez', '044-123456', 'ventas@distnorte.com', 'Av. Industrial 450, Trujillo'),
-('Importadora Pacífico SAC', 'Lucía Ramos', '044-654321', 'contacto@impacifico.com', 'Jr. Comercio 220, Trujillo'),
-('Suministros Andinos EIRL', 'Jorge Salazar', '044-789012', 'info@suministrosandinos.com', 'Calle Los Pinos 88, La Esperanza'),
-('Logística Global Perú', 'María González', '01-5551234', 'contacto@logisticaglobal.pe', 'Av. Panamericana Norte 1234, Lima'),
-('Transportes Rápidos SAC', 'Roberto Sánchez', '01-4445678', 'ventas@transportesrapidos.pe', 'Jr. Industrial 567, Lima'),
-('Empaques Modernos EIRL', 'Ana Torres', '044-333999', 'info@empaquesmodernos.com', 'Av. Los Libertadores 890, Trujillo'),
-('Materiales Industriales del Sur', 'Pedro Castillo', '054-777888', 'ventas@materialessur.com', 'Av. Grau 456, Arequipa'),
-('Suministros Logísticos Integrales', 'Carmen López', '01-6667777', 'contacto@suministroslogisticos.pe', 'Av. Brasil 321, Lima');
+('Nestlé Perú S.A.', 'Carlos Rodríguez', '01-411-9000', 'ventas@nestle.pe', 'Av. Javier Prado Este 5200, Lima'),
+('Gloria S.A.', 'María Fernández', '01-617-8000', 'contacto@gloria.com.pe', 'Av. Industrial 850, Lima'),
+('Backus y Johnston S.A.A.', 'Jorge Mendoza', '01-313-5000', 'ventas@backus.com.pe', 'Jr. Conquistadores 199, Lima'),
+('P&G Perú', 'Ana García', '01-705-8000', 'info@pg.com', 'Av. Brasil 2460, Lima'),
+('Unilever Andina Perú', 'Roberto Sánchez', '01-615-7000', 'contacto@unilever.com.pe', 'Av. Panamericana Norte 1250, Lima'),
+('Alicorp S.A.A.', 'Pedro Torres', '01-617-6000', 'ventas@alicorp.com.pe', 'Av. Los Héroes 2690, Lima'),
+('Pepsico Perú', 'Carmen López', '01-411-7000', 'info@pepsico.com', 'Av. Principal 450, Lima'),
+('Johnson & Johnson Perú', 'Luis Castro', '01-705-6000', 'contacto@jj.com.pe', 'Av. Salaverry 3500, Lima');
 
 -- =====================================================================
 -- 4. PRODUCTOS
@@ -100,21 +100,21 @@ CREATE TABLE productos (
 );
 
 INSERT INTO productos (nombre, descripcion, precio_unitario, stock_actual, stock_minimo, proveedor_id) VALUES
-('Caja de cartón corrugado 40x30x30', 'Caja estándar para embalaje', 3.50, 500, 100, 1),
-('Pallet de madera estándar', 'Pallet 1.2x1.0m capacidad 1000kg', 45.00, 80, 20, 2),
-('Film stretch industrial', 'Rollo de film para paletizado, 500m', 18.90, 150, 30, 1),
-('Etiquetas térmicas autoadhesivas', 'Rollo de 1000 etiquetas para impresora térmica', 12.00, 200, 50, 3),
-('Cinta de embalaje reforzada', 'Cinta adhesiva 48mm x 100m', 4.20, 300, 60, 3),
-('Contenedor plástico 600x400mm', 'Contenedor apilable para almacenamiento', 25.00, 400, 80, 4),
-('Fleje de acero 19mm', 'Rollo de fleje para sujeción de cargas', 8.50, 250, 50, 5),
-('Protectores de esquina', 'Protectores de cartón para pallets (pack 100)', 15.00, 180, 40, 6),
-('Film retráctil manual', 'Rollo de film retráctil 20 micras x 500m', 22.00, 120, 30, 7),
-('Tarima plática reforzada', 'Tarima plástica 1200x1000mm capacidad 1500kg', 85.00, 60, 15, 8),
-('Caja telescópica grande', 'Caja ajustable para productos grandes', 12.50, 200, 40, 1),
-('Bolsa de polietileno 50x70cm', 'Bolsa resistente para embalaje (pack 500)', 8.00, 600, 120, 2),
-('Relleno de burbuja 50m', 'Rollo de plástico de burbuja para protección', 16.00, 150, 30, 3),
-('Precinto de seguridad', 'Precintos numerados alta seguridad (pack 100)', 35.00, 300, 60, 4),
-('Contenedor metálico 800x600mm', 'Contenedor metálico resistente para almacenamiento', 120.00, 40, 10, 5);
+('Arroz Costeño Premium 1kg', 'Arroz blanco premium bolsa 1kg', 4.50, 2000, 500, 6),
+('Fideos Don Vittorio 500g', 'Fideos espagueti paquete 500g', 2.80, 1500, 300, 6),
+('Leche Gloria Entera 1L', 'Leche entera UHT caja 1L', 3.20, 3000, 600, 2),
+('Cerveza Cusqueña 6-pack', 'Cerveza lager 330ml x 6 botellas', 18.50, 800, 200, 3),
+('Gaseosa Inca Kola 2L', 'Gaseosa personal botella 2L', 4.20, 2500, 500, 3),
+('Detergente Ariel 1kg', 'Detergente en polvo bolsa 1kg', 12.90, 1200, 250, 4),
+('Jabón Lux 3 unidades', 'Jabón de tocador pack 3 unidades', 8.50, 1800, 400, 4),
+('Aceite Girasol La Favorita 1L', 'Aceite vegetal botella 1L', 7.80, 2200, 450, 6),
+('Azúcar Blanca Peru 1kg', 'Azúcar refinada bolsa 1kg', 3.20, 3500, 700, 6),
+('Café Altomayo 250g', 'Café tostado molido paquete 250g', 15.90, 900, 200, 1),
+('Atún Dolores 140g', 'Atún en agua lata 140g', 5.50, 2800, 550, 1),
+('Galletas Oreo 150g', 'Galletas con relleno paquete 150g', 4.80, 1600, 320, 1),
+('Shampoo Sedal 400ml', 'Shampoo anti-caída botella 400ml', 9.90, 1400, 280, 4),
+('Pasta Dental Colgate 100ml', 'Pasta dental tubo 100ml', 6.50, 1900, 380, 4),
+('Desodorante Rexona 50ml', 'Desodorante roll-on 50ml', 8.20, 1700, 340, 4);
 
 -- =====================================================================
 -- 5. ALMACENES
@@ -131,10 +131,11 @@ CREATE TABLE almacenes (
 );
 
 INSERT INTO almacenes (nombre, ubicacion, capacidad_total, coste_mensual_operacion) VALUES
-('Almacén Central Trujillo', 'Av. Industrial 1200, Trujillo', 5000.00, 8500.00),
-('Almacén Norte La Esperanza', 'Carretera Industrial Km 5, La Esperanza', 3000.00, 5200.00),
-('Centro de Distribución Lima', 'Av. Panamericana Norte 2500, Lima', 8000.00, 12500.00),
-('Almacén Sur Arequipa', 'Av. Industrial 800, Arequipa', 4000.00, 7800.00);
+('CD Plaza Vea Trujillo', 'Av. Industrial 1200, Trujillo', 15000.00, 25000.00),
+('CD Plaza Vea Chiclayo', 'Carretera Panamericana Norte Km 5, Chiclayo', 12000.00, 20000.00),
+('CD Plaza Vea Lima Central', 'Av. Panamericana Norte 2500, Lima', 25000.00, 45000.00),
+('CD Plaza Vea Arequipa', 'Av. Industrial 800, Arequipa', 10000.00, 18000.00),
+('CD Plaza Vea Piura', 'Av. Grau 450, Piura', 9000.00, 16000.00);
 
 -- =====================================================================
 -- 6. INVENTARIOS
@@ -150,40 +151,40 @@ CREATE TABLE inventarios (
 );
 
 INSERT INTO inventarios (producto_id, almacen_id, cantidad, ubicacion_estanteria) VALUES
-(1, 1, 300, 'A-01-01'),
-(1, 2, 200, 'B-02-01'),
-(1, 3, 450, 'C-01-05'),
-(2, 1, 50, 'A-02-01'),
-(2, 2, 30, 'B-01-03'),
-(2, 3, 120, 'C-02-02'),
-(3, 1, 100, 'A-01-05'),
-(3, 2, 50, 'B-02-02'),
-(3, 3, 200, 'C-03-01'),
+(1, 1, 500, 'A-01-01'),
+(1, 2, 400, 'B-02-01'),
+(1, 3, 800, 'C-01-05'),
+(2, 1, 350, 'A-02-01'),
+(2, 2, 300, 'B-01-03'),
+(2, 3, 500, 'C-02-02'),
+(3, 1, 600, 'A-01-05'),
+(3, 2, 500, 'B-02-02'),
+(3, 3, 1200, 'C-03-01'),
 (4, 1, 200, 'A-03-01'),
-(4, 3, 350, 'C-04-02'),
-(5, 1, 150, 'A-01-02'),
-(5, 2, 150, 'B-03-01'),
-(5, 3, 280, 'C-05-01'),
-(6, 1, 250, 'A-04-01'),
-(6, 3, 380, 'C-06-02'),
-(7, 2, 180, 'B-04-01'),
-(7, 3, 220, 'C-07-01'),
-(8, 1, 150, 'A-05-01'),
-(8, 3, 200, 'C-08-02'),
-(9, 2, 100, 'B-05-01'),
-(9, 4, 80, 'D-01-01'),
-(10, 1, 40, 'A-06-01'),
-(10, 3, 60, 'C-09-02'),
-(11, 2, 150, 'B-06-01'),
-(11, 4, 120, 'D-02-01'),
-(12, 1, 400, 'A-07-01'),
-(12, 3, 550, 'C-10-02'),
-(13, 2, 120, 'B-07-01'),
-(13, 4, 100, 'D-03-01'),
-(14, 1, 250, 'A-08-01'),
-(14, 3, 300, 'C-11-02'),
-(15, 2, 30, 'B-08-01'),
-(15, 4, 25, 'D-04-01');
+(4, 3, 400, 'C-04-02'),
+(5, 1, 500, 'A-01-02'),
+(5, 2, 450, 'B-03-01'),
+(5, 3, 900, 'C-05-01'),
+(6, 1, 300, 'A-04-01'),
+(6, 3, 500, 'C-06-02'),
+(7, 2, 400, 'B-04-01'),
+(7, 3, 600, 'C-07-01'),
+(8, 1, 350, 'A-05-01'),
+(8, 3, 550, 'C-08-02'),
+(9, 2, 700, 'B-05-01'),
+(9, 4, 600, 'D-01-01'),
+(10, 1, 200, 'A-06-01'),
+(10, 3, 350, 'C-09-02'),
+(11, 2, 300, 'B-06-01'),
+(11, 4, 250, 'D-02-01'),
+(12, 1, 800, 'A-07-01'),
+(12, 3, 1000, 'C-10-02'),
+(13, 2, 350, 'B-07-01'),
+(13, 4, 300, 'D-03-01'),
+(14, 1, 450, 'A-08-01'),
+(14, 3, 600, 'C-11-02'),
+(15, 2, 300, 'B-08-01'),
+(15, 4, 250, 'D-04-01');
 
 -- =====================================================================
 -- 7. ÓRDENES DE COMPRA
@@ -217,28 +218,33 @@ CREATE TABLE detalles_compra (
 
 -- Datos de ejemplo: Órdenes de compra
 INSERT INTO ordenes_compra (proveedor_id, fecha_emision, fecha_entrega_esperada, fecha_entrega_real, total, estado, usuario_registra_id, almacen_destino_id) VALUES
-(1, '2026-05-01', '2026-05-15', '2026-05-14', 4500.00, 'entregado', 2, 1),
-(2, '2026-05-10', '2026-05-25', '2026-05-26', 3200.00, 'entregado', 2, 2),
-(3, '2026-05-20', '2026-06-05', NULL, 2800.00, 'en transito', 2, 3),
-(4, '2026-06-01', '2026-06-15', NULL, 5100.00, 'pendiente', 2, 1),
-(5, '2026-06-05', '2026-06-20', NULL, 3900.00, 'pendiente', 2, 4),
-(1, '2026-06-08', '2026-06-22', NULL, 4200.00, 'en almacen', 2, 2);
+(6, '2026-05-01', '2026-05-10', '2026-05-09', 12500.00, 'entregado', 2, 1),
+(2, '2026-05-05', '2026-05-15', '2026-05-16', 8900.00, 'entregado', 2, 2),
+(3, '2026-05-15', '2026-05-25', NULL, 15600.00, 'en transito', 2, 3),
+(4, '2026-06-01', '2026-06-12', NULL, 18500.00, 'pendiente', 2, 1),
+(5, '2026-06-05', '2026-06-18', NULL, 14200.00, 'pendiente', 2, 4),
+(6, '2026-06-08', '2026-06-20', NULL, 11000.00, 'en almacen', 2, 2);
 
 -- Datos de ejemplo: Detalles de compra
 INSERT INTO detalles_compra (orden_compra_id, producto_id, cantidad, precio_unitario, subtotal) VALUES
-(1, 1, 500, 3.50, 1750.00),
-(1, 3, 150, 18.90, 2835.00),
-(2, 2, 40, 45.00, 1800.00),
-(2, 5, 333, 4.20, 1400.00),
-(3, 6, 80, 25.00, 2000.00),
-(3, 7, 94, 8.50, 800.00),
-(4, 8, 120, 15.00, 1800.00),
-(4, 9, 150, 22.00, 3300.00),
-(5, 10, 30, 85.00, 2550.00),
-(5, 11, 108, 12.50, 1350.00),
-(6, 12, 300, 8.00, 2400.00),
-(6, 13, 100, 16.00, 1600.00),
-(6, 14, 20, 35.00, 700.00);
+(1, 1, 1000, 4.50, 4500.00),
+(1, 2, 800, 2.80, 2240.00),
+(1, 8, 500, 7.80, 3900.00),
+(2, 3, 1500, 3.20, 4800.00),
+(2, 9, 800, 3.20, 2560.00),
+(2, 5, 300, 4.20, 1260.00),
+(3, 4, 400, 18.50, 7400.00),
+(3, 5, 500, 4.20, 2100.00),
+(3, 6, 400, 12.90, 5160.00),
+(4, 7, 600, 8.50, 5100.00),
+(4, 10, 500, 15.90, 7950.00),
+(4, 11, 400, 5.50, 2200.00),
+(5, 12, 500, 9.90, 4950.00),
+(5, 13, 600, 6.50, 3900.00),
+(5, 14, 400, 8.20, 3280.00),
+(6, 1, 800, 4.50, 3600.00),
+(6, 8, 500, 7.80, 3900.00),
+(6, 9, 700, 3.20, 2240.00);
 
 -- =====================================================================
 -- 9. COSTES DE ALMACENAMIENTO
@@ -258,19 +264,21 @@ CREATE TABLE costes_almacenamiento (
 
 -- Datos de ejemplo: Costes de almacenamiento
 INSERT INTO costes_almacenamiento (almacen_id, fecha, concepto, monto, tipo_gasto, operacion_referencia, usuario_registra_id) VALUES
-(1, '2026-05-01', 'Alquiler mensual mayo', 8500.00, 'alquiler', 'ALQ-2026-05-01', 2),
-(1, '2026-05-15', 'Mantenimiento de montacargas', 450.00, 'mantenimiento', 'MANT-001', 2),
-(1, '2026-05-20', 'Servicios básicos (agua/luz)', 680.00, 'servicios', 'SERV-001', 2),
-(2, '2026-05-01', 'Alquiler mensual mayo', 5200.00, 'alquiler', 'ALQ-2026-05-02', 2),
-(2, '2026-05-10', 'Reparación de estanterías', 320.00, 'mantenimiento', 'MANT-002', 2),
-(3, '2026-05-01', 'Alquiler mensual mayo', 12500.00, 'alquiler', 'ALQ-2026-05-03', 2),
-(3, '2026-05-12', 'Servicios de seguridad', 1200.00, 'servicios', 'SERV-002', 2),
-(4, '2026-05-01', 'Alquiler mensual mayo', 7800.00, 'alquiler', 'ALQ-2026-05-04', 2),
-(4, '2026-05-18', 'Mano de obra extra', 850.00, 'mano_obra', 'MO-001', 2),
-(1, '2026-06-01', 'Alquiler mensual junio', 8500.00, 'alquiler', 'ALQ-2026-06-01', 2),
-(2, '2026-06-01', 'Alquiler mensual junio', 5200.00, 'alquiler', 'ALQ-2026-06-02', 2),
-(3, '2026-06-01', 'Alquiler mensual junio', 12500.00, 'alquiler', 'ALQ-2026-06-03', 2),
-(4, '2026-06-01', 'Alquiler mensual junio', 7800.00, 'alquiler', 'ALQ-2026-06-04', 2);
+(1, '2026-05-01', 'Alquiler mensual mayo CD Trujillo', 25000.00, 'alquiler', 'ALQ-2026-05-01', 2),
+(1, '2026-05-15', 'Mantenimiento de cámaras frigoríficas', 1200.00, 'mantenimiento', 'MANT-001', 2),
+(1, '2026-05-20', 'Servicios básicos (agua/luz)', 1800.00, 'servicios', 'SERV-001', 2),
+(2, '2026-05-01', 'Alquiler mensual mayo CD Chiclayo', 20000.00, 'alquiler', 'ALQ-2026-05-02', 2),
+(2, '2026-05-10', 'Reparación de estanterías metálicas', 850.00, 'mantenimiento', 'MANT-002', 2),
+(3, '2026-05-01', 'Alquiler mensual mayo CD Lima', 45000.00, 'alquiler', 'ALQ-2026-05-03', 2),
+(3, '2026-05-12', 'Servicios de seguridad 24/7', 3500.00, 'servicios', 'SERV-002', 2),
+(4, '2026-05-01', 'Alquiler mensual mayo CD Arequipa', 18000.00, 'alquiler', 'ALQ-2026-05-04', 2),
+(4, '2026-05-18', 'Mano de obra extra temporada', 1500.00, 'mano_obra', 'MO-001', 2),
+(5, '2026-05-01', 'Alquiler mensual mayo CD Piura', 16000.00, 'alquiler', 'ALQ-2026-05-05', 2),
+(1, '2026-06-01', 'Alquiler mensual junio CD Trujillo', 25000.00, 'alquiler', 'ALQ-2026-06-01', 2),
+(2, '2026-06-01', 'Alquiler mensual junio CD Chiclayo', 20000.00, 'alquiler', 'ALQ-2026-06-02', 2),
+(3, '2026-06-01', 'Alquiler mensual junio CD Lima', 45000.00, 'alquiler', 'ALQ-2026-06-03', 2),
+(4, '2026-06-01', 'Alquiler mensual junio CD Arequipa', 18000.00, 'alquiler', 'ALQ-2026-06-04', 2),
+(5, '2026-06-01', 'Alquiler mensual junio CD Piura', 16000.00, 'alquiler', 'ALQ-2026-06-05', 2);
 
 -- =====================================================================
 -- 10. VEHÍCULOS
@@ -289,12 +297,14 @@ CREATE TABLE vehiculos (
 );
 
 INSERT INTO vehiculos (placa, modelo, capacidad_carga, coste_por_km) VALUES
-('T1A-123', 'Volvo FH 16 - Camión de carga', 12000.00, 2.85),
-('T2B-456', 'Hino 500 - Camión mediano', 6000.00, 1.95),
-('T3C-789', 'Mercedes-Benz Actros - Camión grande', 15000.00, 3.20),
-('T4D-012', 'Scania R450 - Camión articulado', 18000.00, 3.50),
-('T5E-345', 'Iveco Eurocargo - Camión ligero', 3500.00, 1.45),
-('T6F-678', 'MAN TGS - Camión pesado', 22000.00, 3.80);
+('PV-1001', 'Volvo FH 16 - Camión refrigerado Plaza Vea', 12000.00, 2.85),
+('PV-1002', 'Hino 500 - Camión mediano Plaza Vea', 6000.00, 1.95),
+('PV-1003', 'Mercedes-Benz Actros - Camión grande Plaza Vea', 15000.00, 3.20),
+('PV-1004', 'Scania R450 - Camión articulado Plaza Vea', 18000.00, 3.50),
+('PV-1005', 'Iveco Eurocargo - Camión ligero Plaza Vea', 3500.00, 1.45),
+('PV-1006', 'MAN TGS - Camión pesado Plaza Vea', 22000.00, 3.80),
+('PV-1007', 'Volvo FM - Camión distribución Plaza Vea', 8000.00, 2.20),
+('PV-1008', 'Mercedes-Benz Atego - Camión urbano Plaza Vea', 5000.00, 1.80);
 
 -- =====================================================================
 -- 11. COSTES DE TRANSPORTE
@@ -318,16 +328,16 @@ CREATE TABLE costes_transporte (
 
 -- Datos de ejemplo: Costes de transporte
 INSERT INTO costes_transporte (vehiculo_id, fecha, ruta_origen, ruta_destino, kilometros_recorridos, coste_combustible, coste_peajes, coste_mantenimiento, coste_conductor, coste_total, operacion_referencia, usuario_registra_id) VALUES
-(1, '2026-05-02', 'Trujillo', 'Lima', 560.00, 850.00, 120.00, 50.00, 200.00, 1220.00, 'TRANS-001', 2),
-(2, '2026-05-05', 'Lima', 'Trujillo', 560.00, 680.00, 120.00, 40.00, 180.00, 1020.00, 'TRANS-002', 2),
-(3, '2026-05-08', 'Trujillo', 'Arequipa', 850.00, 1350.00, 180.00, 80.00, 280.00, 1890.00, 'TRANS-003', 2),
-(1, '2026-05-12', 'Lima', 'Trujillo', 560.00, 820.00, 120.00, 55.00, 200.00, 1195.00, 'TRANS-004', 2),
-(4, '2026-05-15', 'Arequipa', 'Lima', 850.00, 1480.00, 180.00, 90.00, 320.00, 2070.00, 'TRANS-005', 2),
-(5, '2026-05-18', 'Trujillo', 'Chiclayo', 210.00, 280.00, 45.00, 25.00, 80.00, 430.00, 'TRANS-006', 2),
-(6, '2026-05-20', 'Lima', 'Arequipa', 850.00, 1650.00, 180.00, 100.00, 350.00, 2280.00, 'TRANS-007', 2),
-(2, '2026-05-22', 'Chiclayo', 'Trujillo', 210.00, 260.00, 45.00, 30.00, 75.00, 410.00, 'TRANS-008', 2),
-(3, '2026-05-25', 'Trujillo', 'Lima', 560.00, 920.00, 120.00, 70.00, 250.00, 1360.00, 'TRANS-009', 2),
-(1, '2026-05-28', 'Lima', 'Trujillo', 560.00, 840.00, 120.00, 60.00, 210.00, 1230.00, 'TRANS-010', 2);
+(1, '2026-05-02', 'CD Lima', 'CD Trujillo', 560.00, 1200.00, 150.00, 80.00, 350.00, 1780.00, 'TRANS-001', 2),
+(2, '2026-05-05', 'CD Trujillo', 'CD Chiclayo', 210.00, 450.00, 60.00, 40.00, 180.00, 730.00, 'TRANS-002', 2),
+(3, '2026-05-08', 'CD Lima', 'CD Arequipa', 850.00, 1800.00, 220.00, 120.00, 450.00, 2590.00, 'TRANS-003', 2),
+(1, '2026-05-12', 'CD Trujillo', 'CD Lima', 560.00, 1150.00, 150.00, 85.00, 350.00, 1735.00, 'TRANS-004', 2),
+(4, '2026-05-15', 'CD Arequipa', 'CD Lima', 850.00, 1950.00, 220.00, 130.00, 500.00, 2800.00, 'TRANS-005', 2),
+(5, '2026-05-18', 'CD Trujillo', 'CD Piura', 200.00, 380.00, 50.00, 35.00, 150.00, 615.00, 'TRANS-006', 2),
+(6, '2026-05-20', 'CD Lima', 'CD Arequipa', 850.00, 2100.00, 220.00, 140.00, 550.00, 3010.00, 'TRANS-007', 2),
+(2, '2026-05-22', 'CD Piura', 'CD Trujillo', 200.00, 360.00, 50.00, 38.00, 140.00, 588.00, 'TRANS-008', 2),
+(3, '2026-05-25', 'CD Trujillo', 'CD Lima', 560.00, 1280.00, 150.00, 95.00, 400.00, 1925.00, 'TRANS-009', 2),
+(1, '2026-05-28', 'CD Lima', 'CD Trujillo', 560.00, 1180.00, 150.00, 90.00, 350.00, 1770.00, 'TRANS-010', 2);
 
 -- =====================================================================
 -- 12. DISTRIBUCIONES
@@ -347,9 +357,9 @@ CREATE TABLE distribuciones (
 
 -- Datos de ejemplo: Distribuciones
 INSERT INTO distribuciones (orden_compra_id, vehiculo_id, fecha_salida, fecha_entrega, estado, coste_total_transporte) VALUES
-(1, 1, '2026-05-02 08:00:00', '2026-05-14 16:30:00', 'entregado', 1220.00),
-(2, 2, '2026-05-05 09:30:00', '2026-05-26 14:45:00', 'entregado', 1020.00),
-(3, 3, '2026-05-20 07:00:00', NULL, 'en transito', 1890.00),
+(1, 1, '2026-05-02 08:00:00', '2026-05-09 16:30:00', 'entregado', 1780.00),
+(2, 2, '2026-05-05 09:30:00', '2026-05-16 14:45:00', 'entregado', 730.00),
+(3, 3, '2026-05-20 07:00:00', NULL, 'en transito', 2590.00),
 (4, 4, NULL, NULL, 'pendiente', 0.00),
 (5, 5, NULL, NULL, 'pendiente', 0.00),
 (6, 6, '2026-06-08 10:00:00', NULL, 'en almacen', 0.00);
@@ -387,11 +397,11 @@ CREATE TABLE alertas_sobrecostes (
 
 -- Datos de ejemplo: Alertas de sobrecostes
 INSERT INTO alertas_sobrecostes (fecha, tipo, operacion_referencia, monto_esperado, monto_real, diferencia, porcentaje_exceso, estado) VALUES
-('2026-05-15 10:30:00', 'transporte', 'TRANS-003', 1700.00, 1890.00, 190.00, 11.18, 'revisada'),
-('2026-05-20 14:45:00', 'almacenamiento', 'MANT-002', 300.00, 320.00, 20.00, 6.67, 'activa'),
-('2026-05-25 09:15:00', 'transporte', 'TRANS-007', 2000.00, 2280.00, 280.00, 14.00, 'activa'),
-('2026-06-01 11:00:00', 'compra', 'OC-004', 4600.00, 5100.00, 500.00, 10.87, 'activa'),
-('2026-06-05 16:20:00', 'almacenamiento', 'MO-001', 750.00, 850.00, 100.00, 13.33, 'activa');
+('2026-05-15 10:30:00', 'transporte', 'TRANS-003', 2300.00, 2590.00, 290.00, 12.61, 'revisada'),
+('2026-05-20 14:45:00', 'almacenamiento', 'MANT-002', 1000.00, 1200.00, 200.00, 20.00, 'activa'),
+('2026-05-25 09:15:00', 'transporte', 'TRANS-007', 2700.00, 3010.00, 310.00, 11.48, 'activa'),
+('2026-06-01 11:00:00', 'compra', 'OC-004', 17000.00, 18500.00, 1500.00, 8.82, 'activa'),
+('2026-06-05 16:20:00', 'almacenamiento', 'MO-001', 1300.00, 1500.00, 200.00, 15.38, 'activa');
 
 -- Tabla de configuración de umbrales (apoyo para RF12)
 CREATE TABLE configuracion_alertas (
@@ -404,11 +414,11 @@ CREATE TABLE configuracion_alertas (
 );
 
 INSERT INTO configuracion_alertas (tipo, umbral_porcentaje, monto_presupuestado_mensual) VALUES
-('compra', 10.00, 50000.00),
-('almacenamiento', 10.00, 15000.00),
-('transporte', 15.00, 12000.00),
-('distribucion', 15.00, 8000.00),
-('general', 10.00, 85000.00);
+('compra', 10.00, 150000.00),
+('almacenamiento', 10.00, 124000.00),
+('transporte', 15.00, 85000.00),
+('distribucion', 15.00, 45000.00),
+('general', 10.00, 404000.00);
 
 -- =====================================================================
 -- 15. AUDITORÍAS

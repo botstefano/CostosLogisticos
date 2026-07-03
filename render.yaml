@@ -1,0 +1,64 @@
+services:
+  # PostgreSQL Database
+  - type: pserv
+    name: logistic-cost-system-db
+    plan: free
+    env: docker
+    region: oregon
+
+  # Backend API
+  - type: web
+    name: logistic-cost-system-backend
+    plan: free
+    env: docker
+    region: oregon
+    dockerContext: ./backend
+    dockerfilePath: ./backend/Dockerfile
+    envVars:
+      - key: PORT
+        value: 4000
+      - key: NODE_ENV
+        value: production
+      - key: DB_HOST
+        fromService:
+          name: logistic-cost-system-db
+          type: pserv
+          property: host
+      - key: DB_PORT
+        value: 5432
+      - key: DB_USER
+        fromService:
+          name: logistic-cost-system-db
+          type: pserv
+          property: user
+      - key: DB_PASSWORD
+        fromService:
+          name: logistic-cost-system-db
+          type: pserv
+          property: password
+      - key: DB_NAME
+        fromService:
+          name: logistic-cost-system-db
+          type: pserv
+          property: database
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_EXPIRES_IN
+        value: 8h
+      - key: DEFAULT_ALERT_THRESHOLD
+        value: 10
+
+  # Frontend
+  - type: web
+    name: logistic-cost-system-frontend
+    plan: free
+    env: docker
+    region: oregon
+    dockerContext: ./frontend
+    dockerfilePath: ./frontend/Dockerfile
+    envVars:
+      - key: VITE_API_URL
+        fromService:
+          name: logistic-cost-system-backend
+          type: web
+          property: url
