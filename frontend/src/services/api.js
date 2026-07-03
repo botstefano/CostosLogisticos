@@ -53,3 +53,4 @@ export async function descargarArchivo(url, filenameFallback = 'reporte') {
   document.body.removeChild(link);
   window.URL.revokeObjectURL(link.href);
 }
+
